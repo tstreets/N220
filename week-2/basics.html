@@ -62,12 +62,54 @@
 
     <script>
       //base for elements: document.getElementById('').innerHTML +=
+      //   const myName = "Ty";
+      let myName = "Ty";
+      myName = "the Lecturer Guy";
+
+      console.log(myName);
 
       //Arithmetic
-
+      document.getElementById("multi").innerHTML += " 13 x 27 = " + 13 * 27;
+      document.getElementById("division").innerHTML += " 6 / 2 = " + 6 / 2;
+      document.getElementById("remainder").innerHTML += " 4 % 3 = " + (4 % 3);
+      document.getElementById("exponents").innerHTML += " 2 ** 3 = " + 2 ** 3;
+      let myNumber = 2;
+      document.getElementById("increment").innerHTML += " 2++ = " + myNumber++;
+      document.getElementById("increment").innerHTML +=
+        "<br /> ++3 = " + ++myNumber;
+      document.getElementById("decrement").innerHTML += " 4-- = " + myNumber--;
+      document.getElementById("decrement").innerHTML +=
+        "<br /> --3 = " + --myNumber;
       //Assignment
+      document.getElementById("notSign").innerHTML += " !5 = " + !5;
+      document.getElementById("notSign").innerHTML += "<br> !'' = " + !"";
+
+      let addToNum = 5;
+      addToNum += 2;
+      document.getElementById("addTo").innerHTML += " 5 += 2 = " + addToNum;
+
+      let addToString = "Ty";
+      addToString += " the Potato Guy";
+      document.getElementById("addTo").innerHTML +=
+        "<br>'Ty' += ' the Potato Guy' = " + addToString;
+
+      let subToNum = 5;
+      subToNum -= 2;
+      document.getElementById("subTo").innerHTML += " 5 -= 2 = " + subToNum;
 
       //Comparison
+      document.getElementById("equal").innerHTML += " 3 == '3' = " + (3 == "3");
+      document.getElementById("equalVT").innerHTML +=
+        "3 === '3' = " + (3 === "3");
+
+      document.getElementById("nEqual").innerHTML +=
+        " 3 != '3' = " + (3 != "3");
+      document.getElementById("nEqualVT").innerHTML +=
+        " 3 !== '3' = " + (3 !== "3");
+
+      document.getElementById("gThan").innerHTML += " 3 > 2 = " + (3 > 2);
+      document.getElementById("LThanOrEqual").innerHTML +=
+        " 3 < 2 = " + (3 < 2);
     </script>
   </body>
 </html>
