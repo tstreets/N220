@@ -106,3 +106,52 @@ printFriends();
 //      This could be just a value or an array of values to add multiple
 
 // Objects
+const person = {
+  firstName: "Ty",
+  lastName: "the Pumpkin Guy",
+  age: 57,
+  hometown: "Naptown",
+  getFullName() {
+    return `${this.firstName} ${this.lastName}`;
+  },
+};
+
+// 1. Show full name
+document.getElementById("fullName").innerHTML += person.getFullName();
+
+// 2. Change value
+person.age += 1;
+document.getElementById("newFProp").innerHTML += person.age;
+
+// 3. Printing object variable use the JSON.stringify method
+document.getElementById("newFProp").innerHTML += `<br /> ${JSON.stringify(
+  person
+)}`;
+
+// 4. Remove property from person using delete keyword
+delete person.hometown;
+delete person.favoriteColor;
+document.getElementById("newFProp").innerHTML += `<br /> ${JSON.stringify(
+  person
+)}`;
+
+// 5. Print a sentence using our object
+console.log(`${person.getFullName()} is ${person.age} years old.`);
+
+// 6. Add a method to an existing object
+person.isASenior = function () {
+  return this.age >= 65;
+};
+console.log(person.isASenior());
+
+person.age += 10;
+console.log(person.isASenior());
+
+let keyProp = "age";
+console.log(`person[keyProp] = ${person[keyProp]}`);
+console.log(`person.keyProp = ${person.keyProp}`);
+
+person["Middle Initial"] = "L";
+console.log(person["Middle Initial"]);
+
+person.hair_color = "black";
