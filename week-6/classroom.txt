@@ -1,0 +1,13 @@
+1. Create the classroom.html file 
+
+2. Change the title to "Classroom" 
+
+3. Add an h1 tag with the text "Classroom Students" 
+
+4. Add a p tag with the id of "students" 
+
+5. Add an input tag with the id and name of "studentName" 
+
+6. Add a button with an onclick of a function to add a new student 
+
+7. Link the classroom.js script file
