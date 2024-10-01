@@ -1,0 +1,11 @@
+1. Create counter.html file
+
+2. Change title to Counter
+
+3. Add h1 tag with text "Count"
+
+4. Add p tag with id="counter"
+
+5. Add button with onclick="addCount()"
+
+6. Add script link to counter.js file
