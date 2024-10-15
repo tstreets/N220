@@ -37,8 +37,8 @@ function showFriends() {
     friendsListRef.innerHTML += `<li>
     <span style="color: ${friend.color}">${friend.name}</span>
     <button onclick="removeFriend(${friendIndex})">X</button>
-    <button onclick="moveFriend('${friend.name}', true)">&#8593;</button>
-    <button onclick="moveFriend('${friend.name}', false)">&#8595;</button>
+    <button onclick="moveFriend(${friendIndex}, true)">&#8593;</button>
+    <button onclick="moveFriend(${friendIndex}, false)">&#8595;</button>
     
     <input 
         type="color" 
@@ -66,22 +66,16 @@ function clearList() {
 }
 
 // function to move friends ranking
-function moveFriend(friendName, isMovingUp) {
-  let friendIndex;
+function moveFriend(friendIndex, isMovingUp) {
   let friendNewIndex;
 
-  for (let i = 0; i < myFriends.length; i++) {
-    if (myFriends[i].name === friendName) {
-      friendIndex = i;
-
-      if (isMovingUp) {
-        friendNewIndex = friendIndex - 1;
-      } else {
-        friendNewIndex = friendIndex + 1;
-      }
-    }
+  if (isMovingUp) {
+    friendNewIndex = friendIndex - 1;
+  } else {
+    friendNewIndex = friendIndex + 1;
   }
 
+  const friendName = myFriends[friendIndex].name;
   // remove friend from old space
   myFriends.splice(friendIndex, 1);
   // add friend to new space
