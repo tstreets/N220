@@ -1,4 +1,5 @@
 const theBoxRef = document.getElementById("theBox");
+const boxFormRef = document.getElementById("boxForm");
 
 theBoxRef.style.border = "3px solid black";
 theBoxRef.style.minHeight = "300px";
@@ -16,6 +17,8 @@ function addToBox() {
   newDiv.classList.add("box");
   newDiv.innerHTML = newThing;
 
+  newDiv.dataset.text = newThing;
+
   theBoxRef.appendChild(newDiv);
 
   const allBoxes = document.querySelectorAll(".box");
@@ -31,6 +34,12 @@ function clickBox(e) {
   } else {
     e.currentTarget.style.backgroundColor = "lightcoral";
   }
+
+  boxFormRef.style.display = "block";
+  document.getElementById("boxText").value = e.currentTarget.dataset.text;
+  document.getElementById("changeBox").onclick = changeText.bind(
+    e.currentTarget
+  );
 }
 
 function toggleTheBoxHidden() {
@@ -39,4 +48,9 @@ function toggleTheBoxHidden() {
   } else {
     theBoxRef.style.display = "grid";
   }
+}
+
+function changeText() {
+  this.innerHTML = document.getElementById("boxText").value;
+  boxFormRef.style.display = "none";
 }
