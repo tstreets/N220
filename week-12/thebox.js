@@ -26,5 +26,17 @@ function addToBox() {
 }
 
 function clickBox(e) {
-  console.log(e.currentTarget);
+  if (e.currentTarget.style.backgroundColor === "lightcoral") {
+    e.currentTarget.style.backgroundColor = "lightgray";
+  } else {
+    e.currentTarget.style.backgroundColor = "lightcoral";
+  }
+}
+
+function toggleTheBoxHidden() {
+  if (theBoxRef.style.display !== "none") {
+    theBoxRef.style.display = "none";
+  } else {
+    theBoxRef.style.display = "grid";
+  }
 }
