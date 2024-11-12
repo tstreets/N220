@@ -35,6 +35,8 @@ function clickBox(e) {
     e.currentTarget.style.backgroundColor = "lightcoral";
   }
 
+  debugger;
+
   boxFormRef.style.display = "block";
   document.getElementById("boxText").value = e.currentTarget.dataset.text;
   document.getElementById("changeBox").onclick = changeText.bind(
